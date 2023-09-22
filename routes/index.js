@@ -3,14 +3,40 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  let data = {}
-  data.arr = [1,2,3,4,5,6,7,8,9,10]
-  data.users = [
-    {name : 'andy',age:22},
-    {name : 'john',age:45},
-    {name : 'bob', age:50}
+  var users = [
+    {
+      email : 'andy@gmail.com',
+      picture : 'somepicture',
+      username : 'andy_123',
+      price : 100
+    },
+    {
+      email : 'luke@gmail.com',
+      picture : 'somepicture',
+      username : 'luke_skywalker',
+      price : 500
+    },
+    {
+      email : 'evylyn@gmail.com',
+      picture : 'somepicture',
+      username : 'evelyn_999',
+      price : 100
+    },
+    {
+      email : 'rose@gmail.com',
+      picture : 'somepicture',
+      username : 'rose_stalker',
+      price : 300
+    },
+    {
+      email : 'Mandy@gmail.com',
+      picture : 'somepicture',
+      username : 'Mandy_123',
+      price : 100
+    }
+
   ]
-  res.json(data)
+  res.json(users)
 });
 
 module.exports = router;
